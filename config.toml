@@ -1,0 +1,34 @@
+theme="material-design"
+baseurl = "https://kansai-lisp-users.github.io/"
+languageCode = "ja"
+title = "関西Lispユーザー会"
+MetaDataFormat = "toml"
+paginate = 9
+disqusShortname = "Your Disqus Name" # optional
+copyright = "© 2017 関西Lispユーザ会 All rights reserved"
+canonifyurls = true
+contentdir="content/post"
+layoutdir = "layouts"
+publishdir = "public"
+
+[events]
+  newestURL = "#aaa"
+  newestEvent = "なし"
+  nextURL = "#"
+  nextEvent = "第1回関西Lispユーザ会"
+
+
+
+[params]
+  description = "プログラミング言語Lispの関西を中心としたユーザグループです．\n初心者から玄人まで幅広く集まればいいと考えています．" # optional
+  github = "kansai-lisp-users" # optional
+  facebook = "groups/1425860504132972/" # optional
+  headerCover = "images/default.png" # optional
+  footerCover = "images/footerCover.png" # optional
+  googleAnalyticsUserID = "Your Analytics User Id" # optional
+
+
+
+
+[permalinks]
+  post = "/:year/:month/:day/:title/" # optional
