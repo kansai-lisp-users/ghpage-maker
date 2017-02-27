@@ -1,13 +1,40 @@
+
+
+<!DOCTYPE html>
+
+<html lang="{{.Site.LanguageCode}}">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>{{ .Title }}</title>
+
+  <link rel="icon" type="image/vnd.microsoft.icon" href="{{.Site.BaseURL}}/favicon.ico">
+  <link href="{{.Site.BaseURL}}/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{.Site.BaseURL}}/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+  <style type="text/css">
+  {{if .Site.Params.footerCover}}
+    footer.page-footer{background-image: url({{.Site.BaseURL}}/{{.Site.Params.footerCover}});}
+  {{else}}
+    footer.page-footer{background-image: url({{.Site.BaseURL}}/images/default.png);}
+  {{end}}
+  </style>
+</head>
+
+<body>
 {{ partial "header.html" . }}
+{{ partial "groupPage.html" . }}
+{{ partial "sns.html" . }}
 
 <div class="container">
   <div class="section">
-
-{{ partial "content.html" . }}
-  
-{{ partial "pagination.html" .Paginator }}
-
+	{{ partial "content.html" . }}
+	{{ partial "pagination.html" .Paginator }}
   </div>
 </div>
 
 {{ partial "footer.html" . }}
+
+</body>
+</html>
